@@ -1,0 +1,11 @@
+{
+  "name": "blockchain_raspi",
+  "version": "1.0.0",
+  "description": "Blockchain running on raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahanthesh R",
+  "license": "ISC"
+}
