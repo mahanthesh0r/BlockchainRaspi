@@ -7,9 +7,9 @@ var abi = [ { "inputs": [], "payable": false, "stateMutability": "nonpayable", "
 var Address = '0x5FfB5639B767416eBd8F56CD5Ade41CADDF24499';
 id=1;
 renteeAddress = '0x4DBc562B2AC0b38fa7E3C0070b2269BaC90af391';
-module.exports.verify(id,renteeAddress);
 
-function verify(id, renteeAddress, callback){
+
+module.exports.verify = function(id, renteeAddress, callback){
     var Contract = new Web3.eth.Contract(abi,Address);
 
     Contract.methods.verifyQR(id,renteeAddress).call({from: renteeAddress}, function(err, returnValue){

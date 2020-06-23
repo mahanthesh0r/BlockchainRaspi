@@ -1,14 +1,14 @@
 "use strict";
+const AWS = require('aws-sdk');
 const Zbar = require('zbar');
 const speaker = require('./speaker'); 
-const verifier = require("./verifyRentee"); 
-const AWS = require('aws-sdk'); 
+const verifier = require("./verifyRentee");  
 AWS.config.update({region:'ap-south-1'}); 
 const rekognition = new AWS.Rekognition(); 
 const sns = new AWS.SNS(); 
 const s3 = new AWS.S3(); 
 const PythonShell = require('python-shell'); 
-const zbar = new Zbar('/dev/video1'); // connected to USB Webcam not Pi Cam 
+const zbar = new Zbar('/dev/video2'); // connected to USB Webcam not Pi Cam 
 const smartLock = require('./aws-iot'); 
 const myip = require('quick-local-ip');
 

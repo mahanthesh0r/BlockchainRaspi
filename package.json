@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mahanthesh R",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.2.6",
+    "aws-sdk": "^2.702.0",
+    "python-shell": "^2.0.1",
+    "quick-local-ip": "^1.0.7",
+    "speaker": "^0.5.1",
+    "web3": "^1.2.9",
+    "zbar": "0.0.4"
+  }
 }

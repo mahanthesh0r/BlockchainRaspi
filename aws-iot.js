@@ -9,7 +9,7 @@ console.log('loading iot ....');
 var thingShadows = awsIot.thingShadow({
       keyPath: './certs/372b428820-private.pem.key',
   certPath: './certs/372b428820-certificate.pem.crt',
-    caPath: './certs/AmazonRootCA1.pem.crt',
+    caPath: './certs/AmazonRootCA1.pem',
   clientId: 'client1',
   region:'ap-south-1',
   host:'a3gip5bq7vdp6-ats.iot.ap-south-1.amazonaws.com'
