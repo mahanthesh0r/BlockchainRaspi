@@ -1,6 +1,6 @@
 var awsIot = require('aws-iot-device-sdk');
 var fs =require('fs');
-var PythonShell = require('python-shell');
+let {PythonShell} = require('python-shell');
 
 var thingName = 'Blockchain_IOT'
 var clientTokenUpdate;
@@ -25,12 +25,12 @@ thingShadows
                 JSON.stringify(stateObject));
 
                 if(stateObject.state.isDoorOpen){
-                  PythonShell.run('Servo-360-open.py', function(err){
+                  PythonShell.run('servo-360-open.py',null, function(err){
                     if(err) throw err;
                     console.log('door opened');
                   });
                 }else{
-                  PythonShell.run('Servo-360-close.py', function(err){
+                  PythonShell.run('servo-360-close.py',null, function(err){
                     if(err) throw err;
                     console.log('door closed');
 
