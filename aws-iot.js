@@ -51,6 +51,10 @@ module.exports.doorOpen = function(){
       desired: {isDoorOpen: true}
     }
   });
+  PythonShell.run('servo-360-open.py',null, function(err){
+    if(err) throw err;
+    console.log('door opened');
+  });
 };
 
 module.exports.doorClose = function(){
@@ -60,5 +64,9 @@ module.exports.doorClose = function(){
       desired: {isDoorOpen: false}
     }
   });
+//   PythonShell.run('servo-360-close.py',null, function(err){
+//     if(err) throw err;
+//     console.log('door closed');
+// });
 };
 
