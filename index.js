@@ -8,7 +8,7 @@ const rekognition = new AWS.Rekognition();
 const sns = new AWS.SNS(); 
 const s3 = new AWS.S3(); 
 const PythonShell = require('python-shell'); 
-const zbar = new Zbar('/dev/video2'); // connected to USB Webcam not Pi Cam 
+const zbar = new Zbar('/dev/video1'); // connected to USB Webcam not Pi Cam 
 const smartLock = require('./aws-iot'); 
 const myip = require('quick-local-ip');
 
@@ -19,8 +19,14 @@ zbar.stdout.on('data', function(buf){
     console.log('data scanned: ' + buf.toString());
     try{
         var code = JSON.parse(buf.toString());
-        console.log("QR CODE", code)
-        verifier.verify(code, function(err, data){
+        // coneole.log("Required data", code.id)
+        // console.log("required from", code.from)
+        var houseID = code.id;
+        var renteeAddress = code.from
+        console.log("QR CODE", houseID)
+        console.log("QR CODE", renteeAddress)
+        
+        verifier.verify(houseID,renteeAddress, function(err, data){
 
             if(!err){ 
                 if(data){ 

@@ -10,6 +10,7 @@ renteeAddress = '0x4DBc562B2AC0b38fa7E3C0070b2269BaC90af391';
 
 
 module.exports.verify = function(id, renteeAddress, callback){
+    console.log("in contract");
     var Contract = new Web3.eth.Contract(abi,Address);
 
     Contract.methods.verifyQR(id,renteeAddress).call({from: renteeAddress}, function(err, returnValue){
