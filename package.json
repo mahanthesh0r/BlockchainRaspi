@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-iot-device-sdk": "^2.2.6",
-    "aws-sdk": "^2.702.0",
+    "aws-sdk": "^2.814.0",
     "python-shell": "^2.0.1",
     "quick-local-ip": "^1.0.7",
     "speaker": "^0.5.1",
